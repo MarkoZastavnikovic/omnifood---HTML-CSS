@@ -55,7 +55,7 @@
 .delivered-text {
   font-size: 1.8rem;
   font-weight: 600;
-  color: #777;
+  color: #6f6f6f;
 }
 
 .delivered-text span {
@@ -71,7 +71,7 @@
 
 .header {
   position: fixed;
-  opacity: 0.9;
+  opacity: 0.94;
   width: 100vw;
   display: flex;
   justify-content: space-between;
@@ -279,35 +279,9 @@
   width: 100%;
 }
 
-.calories,
-.nutri,
-.rating,
-.diets-checkmark {
-  stroke: #e67e22;
-  width: 2.4rem;
-  height: 2.4rem;
-  /* fill: ; */
-  /* color: ; */
-  /* font-size: ; */
-}
-
 .all-recipes {
   text-align: center;
   font-size: 1.8rem;
-}
-
-.list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 1.6rem;
-}
-
-.list-item {
-  font-size: 1.8rem;
-  display: flex;
-  align-items: center;
-  gap: 1.6rem;
 }
 
 /*********************************************************/
@@ -318,7 +292,7 @@
   background-color: #fdf2e9;
   display: grid;
   grid-template-columns: 55fr 45fr;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .testimonials {
@@ -353,6 +327,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 1.6rem;
   padding: 1.6rem;
+  align-self: center;
 }
 
 .gallery-item {
@@ -362,10 +337,299 @@
 .gallery-item img {
   display: block;
   width: 100%;
-  transition: all 1s;
+  transition: all 2s;
 }
 
 .gallery-item img:hover {
   /* transform: rotate(45deg); */
   transform: scale(1.1);
+}
+
+/*********************************************************/
+/* PRICING SECTION */
+/*********************************************************/
+
+.section-pricing {
+  padding: 9.6rem 0;
+}
+
+.pricing-plan {
+  background-color: #fdf2e9;
+  border-radius: 1.2rem;
+  padding: 4.8rem;
+  width: 75%;
+}
+
+.pricing-plan--starter {
+  justify-self: end;
+}
+
+.pricing-plan--complete {
+  background-color: #fae5d3;
+  box-shadow: 0 2.4rem 4.8rem 0 rgba(0, 0, 0, 0.2);
+  /* transition: all 0.4s; */
+  position: relative;
+  overflow: hidden;
+}
+
+/* .pricing-plan--complete:hover {
+  transform: translateY(-1rem);
+  box-shadow: 0 3.2rem 6.4rem 0 rgba(0, 0, 0, 0.15);
+} */
+
+.pricing-plan--complete::after {
+  content: "Best value";
+  position: absolute;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 0.8rem 4.8rem;
+  transform: rotate(45deg);
+  color: #333;
+  top: 5%;
+  right: -12%;
+  background-color: #ffd43b;
+}
+
+.plan-header {
+  text-align: center;
+  margin-bottom: 4.8rem;
+}
+
+.plan-name {
+  color: #cf711f;
+  font-weight: 600;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  margin-bottom: 3.2rem;
+}
+
+.plan-price {
+  font-size: 6.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.6rem;
+}
+
+.plan-price span {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-right: 0.8rem;
+}
+
+.plan-text {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #6f6f6f;
+}
+
+.plan-sign-up {
+  text-align: center;
+  margin-top: 4.8rem;
+}
+
+/* .pricing-plan--starter a {
+  transform: none !important;
+} */
+
+.plan-details {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.feature {
+  display: grid;
+}
+
+.feature-icon-box {
+  justify-self: start;
+  margin-bottom: 3.2rem;
+  position: relative;
+}
+
+.icon.feature-icon {
+  height: 3.2rem;
+  width: 3.2rem;
+}
+
+.feature-icon-box::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 200%;
+  padding-bottom: 200%;
+  background-color: #fdf2e9;
+  z-index: -3;
+}
+
+.feature-title {
+  font-size: 2.4rem;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 1.6rem;
+}
+
+.feature-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+
+/*********************************************************/
+/* CTA SECTION */
+/*********************************************************/
+
+.section-cta {
+  padding: 4.8rem 0 12.8rem 0;
+}
+
+.cta {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  /* background-color: #e67e22; */
+  box-shadow: 0 2.4rem 4.8rem 0 rgba(0, 0, 0, 0.25);
+  border-radius: 1.2rem;
+  background-image: linear-gradient(to right bottom, #eea564, #e67e22);
+}
+
+.cta-text-box {
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+  color: #45260a;
+}
+
+.cta .heading-secondary {
+  color: #45260a;
+  margin-bottom: 3.2rem;
+}
+
+.cta-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 4.8rem;
+}
+
+.cta-img-box {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(238, 164, 100, 0.25),
+      rgba(230, 125, 34, 0.25)
+    ),
+    url("../img/eating.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.cta-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3.2rem;
+  row-gap: 2.4rem;
+}
+
+.cta-form label {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+
+.cta-form input,
+.cta-form select {
+  font-family: inherit;
+  color: inherit;
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  border: none;
+  background-color: #fdf2e9;
+  border-radius: 0.9rem;
+  box-shadow: 0 0.2rem 0.4rem 0 rgba(0, 0, 0, 0.15);
+}
+
+.cta-form input::placeholder {
+  color: #aaa;
+}
+
+.cta-form *:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
+}
+
+/*********************************************************/
+/* FOOTER */
+/*********************************************************/
+
+.footer {
+  padding: 12.8rem 0;
+  background-color: #fae5d3;
+}
+
+.grid--footer {
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+}
+
+.logo-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  display: block;
+  margin-bottom: 3.2rem;
+}
+
+.copyright {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #767676;
+  margin-top: auto;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 2.4rem;
+}
+
+.footer-heading {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
+}
+
+.contacts {
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #767676;
+}
+
+.address {
+  margin-bottom: 2.4rem;
+}
+
+.footer-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #767676;
+  transform: all 0.3s;
+}
+
+.footer-link:hover,
+.footer-link:active {
+  color: #555;
 }
