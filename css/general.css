@@ -25,6 +25,7 @@ Shades:
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
@@ -32,6 +33,7 @@ body {
   line-height: 1;
   font-weight: 400;
   color: #555;
+  overflow-x: hidden;
 }
 
 .container {
@@ -131,7 +133,7 @@ body {
 .btn--full:hover,
 .btn--full:active {
   background-color: #cf711f;
-  transform: translateY(-0.4rem);
+  transform: translateY(-0.3rem);
 }
 
 .btn--outline:link,
@@ -203,6 +205,7 @@ strong {
   display: flex;
   align-items: center;
   gap: 1.6rem;
+  line-height: 1.2;
 }
 
 .hidden {
